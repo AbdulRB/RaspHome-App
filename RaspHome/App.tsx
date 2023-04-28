@@ -6,6 +6,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import styles from './style'
 
 import HomeScreen from './screens/home';
+import DeviceList from './screens/bluetoothDevices';
+import SearchScreen from './screens/searchDevices';
 
 const AuthStack = createStackNavigator();
 
@@ -21,7 +23,8 @@ export default class App extends Component {
         initialRouteName='Home'
         >
           <AuthStack.Screen name="Home" component={HomeScreen} options={{headerShown: false}} />
-          {/* <AuthStack.Screen name="Device Scan List" component={BluetoothDevices}/> */}
+          {/* <AuthStack.Screen name="Device Scan List" component={DeviceList}/> */}
+          <AuthStack.Screen name="Search Devices" component={SearchScreen} />
         </AuthStack.Navigator>
       </NavigationContainer>
     )

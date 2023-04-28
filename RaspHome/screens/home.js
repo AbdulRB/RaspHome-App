@@ -5,7 +5,7 @@ import styles from '../style'
 export default class HomeScreen extends Component {
 
     deviceListNavigate = () => {
-        this.props.navigation.navigate("Device Scan List")
+        this.props.navigation.navigate("Search Devices")
     }
     
     render() {
@@ -27,7 +27,5 @@ export default class HomeScreen extends Component {
             </View>
         )
     }
-
-
 
 }
