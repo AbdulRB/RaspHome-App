@@ -8,6 +8,7 @@ import styles from './style'
 import HomeScreen from './screens/home';
 import DeviceList from './screens/bluetoothDevices';
 import SearchScreen from './screens/searchDevices';
+import DeviceScreen from './screens/deviceScreen';
 
 const AuthStack = createStackNavigator();
 
@@ -20,11 +21,12 @@ export default class App extends Component {
     return (
       <NavigationContainer>
         <AuthStack.Navigator
-        initialRouteName='Home'
+        initialRouteName='Device Screen'
         >
           <AuthStack.Screen name="Home" component={HomeScreen} options={{headerShown: false}} />
           {/* <AuthStack.Screen name="Device Scan List" component={DeviceList}/> */}
           <AuthStack.Screen name="Search Devices" component={SearchScreen} />
+          <AuthStack.Screen name="Device Screen" component={DeviceScreen} options={{headerShown: false}} />
         </AuthStack.Navigator>
       </NavigationContainer>
     )

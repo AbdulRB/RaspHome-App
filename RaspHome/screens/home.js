@@ -7,6 +7,10 @@ export default class HomeScreen extends Component {
     deviceListNavigate = () => {
         this.props.navigation.navigate("Search Devices")
     }
+
+    deviceScreenNavigate = () => {
+        this.props.navigation.navigate("Device Screen")
+    }
     
     render() {
         return (
@@ -19,7 +23,7 @@ export default class HomeScreen extends Component {
                     </View>
                 </TouchableOpacity>
 
-                <TouchableOpacity onPress={this._signUpNavigate}>
+                <TouchableOpacity onPress={this.deviceScreenNavigate}>
                     <View style={styles.homeButton}>
                         <Text style={styles.buttonText}>Web App</Text>
                     </View>

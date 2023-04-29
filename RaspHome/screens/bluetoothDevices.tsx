@@ -4,8 +4,6 @@ import { BleManager, Device } from "react-native-ble-plx";
 
 type PermissionCallback = (result: boolean) => void
 
-const bleManager = new BleManager();
-
 interface BluetoothLowEnergyApi {
     requestPermissions(callback: PermissionCallback): Promise<void>;
     scanForDevices(): void;
@@ -13,6 +11,8 @@ interface BluetoothLowEnergyApi {
 }
 
 export default function useBLE(): BluetoothLowEnergyApi {
+    const bleManager = new BleManager();
+    
     const [allDevices, setAllDevices] = useState<Device[]>([]);
 
     const requestPermissions = async (callback: PermissionCallback) => {

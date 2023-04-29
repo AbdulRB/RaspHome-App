@@ -47,4 +47,24 @@ export default StyleSheet.create({
         backgroundColor: '#f26f99',
         borderRadius: 7
     },
+    deviceContainer: {
+        backgroundColor: '#80d47f',
+        borderRadius: 7,
+        padding: 10,
+        marginTop: 30,
+    },
+    deviceText: {
+        marginLeft: 10,
+        fontSize: 22,
+    },
+    onButton: {
+        // alignItems: 'center',
+        // justifyContent: 'center',
+        marginTop: 30,
+        marginHorizontal: 60,
+        marginBottom: 20,
+        // padding: 5,
+        backgroundColor: '#f26f99',
+        borderRadius: 7
+    }
 });
